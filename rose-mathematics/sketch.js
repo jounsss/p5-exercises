@@ -10,9 +10,9 @@ function setup() {
 }
 
 function draw() {
-  background(255, 0, 100);
+  background(0);
   translate(width/2, height/2);
-  stroke(0);
+  stroke(255);
   noFill();
   strokeWeight(2);
   beginShape();
