@@ -13,8 +13,8 @@ function Timer(time){
 
     noStroke();
     fill(255);
-    textSize(30);
-    text(this.timeLeft, width/2, height-20, 24, 100);
+    textSize(50);
+    text(this.timeLeft, width/2, height-100, 24, 100);
 
   }
 
