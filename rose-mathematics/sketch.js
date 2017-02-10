@@ -1,12 +1,19 @@
+var canvas;
 var rSlider;
 var nSlider;
 var dSlider;
 
+
+
 function setup() {
-  createCanvas(640,360);
+  var canvas = createCanvas(windowWidth, windowHeight);
   rSlider = createSlider(100, 255, 200);
   nSlider = createSlider(1, 10, 5);
   dSlider = createSlider(1, 10, 5);
+
+  var saveButton = createButton("Save img");
+  saveButton.position(10, 10);
+  //saveButton.mousePressed = saveImage();
 }
 
 function draw() {
@@ -22,11 +29,16 @@ function draw() {
   var d = dSlider.value();
   var k = n/d;
 
-  for(var angle = 0 ; angle < d*TWO_PI ; angle += 0.02){
+  for(var angle = 0 ; angle < d*TAU ; angle += 0.02){
 
     var x = r *cos(k * angle) * cos(angle);
     var y = r * cos(k * angle) * sin(angle);
     vertex(x, y);
   }
   endShape();
+}
+
+function saveImage(){
+  //saveCanvas(canvas, "test", 'jpg');
+  alert("saVe");
 }
