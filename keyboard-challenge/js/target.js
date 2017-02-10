@@ -1,6 +1,6 @@
 function Target(x, y){
   this.pos = createVector(x, y); // target postition
-  this.d = 50; // target diameter
+  this.d = 100; // target diameter
   this.color = 255;
   this.keyCode = round(map(random(), 0, 1, 65, 90));
   this.fontSize = this.d - 10;
