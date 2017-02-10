@@ -2,11 +2,13 @@ var target;
 var score;
 var timer;
 
+var seconds = 20;
+
 function setup() {
   createCanvas(640, 380);
   target = new Target(width/2, height/2);
-  score = new Score(50);
-  timer = new Timer(10);
+  score = new Score();
+  timer = new Timer(seconds);
 }
 
 function draw() {
@@ -32,8 +34,8 @@ function keyPressed() {
   } else {
     if(keyCode === RETURN){
       target = new Target(width/2, height/2);
-      score = new Score(50);
-      timer = new Timer(10);
+      score = new Score();
+      timer = new Timer(seconds);
     }
   }
 }
